@@ -8,11 +8,18 @@ body {
 .calculator {
     display: flex;
     flex-direction: column;
-    background-color: rgb(154, 154, 154);
     justify-content: space-around;
     border-radius: 10px;
     border: solid black 2px;
     padding: 10px;
+    
+    /* Credit: https://css.glass */
+    background: rgba(50, 50, 50, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.1px);
+    -webkit-backdrop-filter: blur(6.1px);
+    border: 1px solid rgba(181, 177, 177, 0.721);
 }
 
 .display {
