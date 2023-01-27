@@ -84,6 +84,12 @@ body {
     background-color: lime;
 }
 
+.button.is-depressed {
+    opacity: 0.6;
+    background-color: rgb(60, 96, 237);
+    color: white;
+}
+
 
 #clear {
     display: flex;
