@@ -1,13 +1,9 @@
 // A function that updates display
-function getCurrentDisplay() {
-    display = document.querySelector('.display');
-    return display.innerHTML;
-};
-
 function updateDisplay(text) {
-    var display = document.querySelector('.display')
-    display.innerHTML = text
-}
+    if (String(text).length > 16) {text = 'limit exceeded'};
+    var display = document.querySelector('.display');
+    display.innerHTML = text;
+};
 
 // Operator function 
 function operate(operation, a, b) {
@@ -42,8 +38,8 @@ buttons.forEach(button => {
             updateDisplay(currentOperand);
         }
 
-        // detects clear key
-        if (action === "Clear") {
+        // detects key
+        if (action === "AC") {
             currentOperand = "";
             previousOperand = "";
             operator = "";
