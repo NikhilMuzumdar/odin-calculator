@@ -12,21 +12,32 @@ function operate(operation, a, b) {
   if (isNaN(a) || isNaN(b)) {
     return NaN;
   }
+
+  let result;
   switch (operation) {
     case '+':
-      return (a + b).toFixed(3);
+      result = a + b;
+      break;
     case '-':
-      return (a - b).toFixed(3);
+      result = a - b;
+      break;
     case 'x':
-      return (a * b).toFixed(3);
+      result = a * b;
+      break;
     case '/':
       if (b === 0) {
         return Infinity;
       }
-      return (a / b).toFixed(3);
+      result = a / b;
+      break;
     default:
       return NaN;
   }
+
+  if (Number.isInteger(result)) {
+    return result;
+  }
+  return parseFloat(result.toFixed(3));
 }
 
 let currentOperand = '';
